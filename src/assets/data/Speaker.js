@@ -1,8 +1,8 @@
-import Speaker1 from "../Speaker.jpg";
+import Speaker1 from "../Speaker.JPG";
 import Speaker2 from "../PSTUCHE.png"
 import Speaker3 from "../GeneralLucky.png";
-import Speaker4 from "../drjumokeoduwole.png";
-import Speaker5 from "../ibukunAdebayo.png";
+import Speaker4 from "../DrJumokeOduwole.png";
+import Speaker5 from "../IbukunAdebayo.png";
 import Speaker6 from "../SeunOkinbaloye.png";
 
 const speakers = [
