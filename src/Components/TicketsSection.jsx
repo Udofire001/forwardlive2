@@ -1,9 +1,5 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
-  FaCalendarAlt,
-  FaMapMarkerAlt,
-  FaClock,
-  FaUsers,
   FaCheck,
   FaStar,
   FaShoppingCart,
@@ -12,7 +8,6 @@ import {
 
 import Executive from "../assets/ticket1.png";
 import Standard from "../assets/ticket22.png";
-import Corporate from "../assets/ticket3.png";
 import Premium from "../assets/ticket4.png";
 import Platinum from "../assets/ticket55.png";
 
@@ -20,11 +15,11 @@ import Platinum from "../assets/ticket55.png";
 const TicketsSection = () => {
   const [selectedTicket, setSelectedTicket] = useState(null);
 
-  const conferenceDetails = {
-    date: "March 15–17, 2025",
-    location: "Tech Convention Center, Lagos",
-    time: "9:00 AM – 6:00 PM Daily",
-  };
+  // const conferenceDetails = {
+  //   date: "March 15–17, 2025",
+  //   location: "Tech Convention Center, Lagos",
+  //   time: "9:00 AM – 6:00 PM Daily",
+  // };
 
   const ticketTypes = [
     {

@@ -31,7 +31,7 @@ const FullScreenVideoBackground = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const fadeStart = 0;
+      // const fadeStart = 0;
       const fadeEnd = window.innerHeight * 0.7; // start fade at top, fully gone at ~70vh
       const newOpacity = Math.max(0, 1 - scrollY / fadeEnd);
       setOpacity(newOpacity);
