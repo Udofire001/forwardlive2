@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Speaker2 from "../assets/PSTUCHE.png"
 import Speaker3 from "../assets/GeneralLucky.png";
-import Speaker4 from "../assets/drjumokeoduwole.png";
+import Speaker4 from "../assets/DrJumokeOduwole.png";
 import Speaker5 from "../assets/IbukunAdebayo.png";
 import Speaker6 from "../assets/SeunOkinbaloye.png";
 import Speaker7 from "../assets/KIKIOSINBAJO.png";
