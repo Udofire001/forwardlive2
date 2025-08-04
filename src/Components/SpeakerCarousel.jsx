@@ -3,20 +3,14 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Speaker2 from "../assets/PSTUCHE.png"
 import Speaker3 from "../assets/GeneralLucky.png";
 import Speaker4 from "../assets/drjumokeoduwole.png";
-import Speaker5 from "../assets/ibukunAdebayo.png";
+import Speaker5 from "../assets/IbukunAdebayo.png";
 import Speaker6 from "../assets/SeunOkinbaloye.png";
 import Speaker7 from "../assets/KIKIOSINBAJO.png";
 
 
 
 
-interface Speaker {
-  name: string;
-  role: string;
-  image: string;
-}
-
-const speakers: Speaker[] = [
+const speakers = [
   {
     name: "PASTOR Uche Aigbe",
     role: "Keynote",
