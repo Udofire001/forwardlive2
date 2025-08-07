@@ -106,13 +106,7 @@ const FullScreenVideoBackground = () => {
             style={{ opacity }}
           />
 
-          {/* Hero Content */}
-          <div className=" flex flex-col px-6 text-[#84191b] fixed bottom-6 left-6 z-20 transition-opacity duration-100">
-            <p className="text-lg font-bold">Forward 2025</p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg">
-              Audacity to Lead
-            </h1>
-          </div>
+           
 
           {/* Ticket   */}
           <FloatingTicketButton />

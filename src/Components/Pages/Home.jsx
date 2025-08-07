@@ -6,74 +6,58 @@ import Footer from "../Footer";
 import Events from "../Events";
 import Tickets from "../TicketsSection";
 
-import {
-  FaBuilding,
-  FaHome,
- 
-  FaUsers,
-} from "react-icons/fa";
+import { FaBuilding, FaHome, FaUsers } from "react-icons/fa";
 
-const CoreValuesData = [
-  {
-    title: "2024 - Lives Transformed",
-    count: 1500,
-    unit: "Lives",
-    icon: FaHome,
-  },
-  {
-    title: "Schools",
-    count: "150+",
-    unit: "Schools",
-    icon: FaBuilding,
-  },
-  {
-    title: "2024 - Lives to experience",
-    count: 3000,
-    unit: "Forward Shift 2025",
-    icon: FaUsers,
-  },
-];
+import Reo from "../../assets/Speaker.JPG";
 
 const Home = () => {
   return (
     <div>
       <div className="font-sans">
         <FullScreenVideoBackground />
-        <section className="min-h-screen text-black px-10 py-20">
-           
+        <section className=" text-black px-1 py-20">
+          <section className="text-black px-1 py-10 overflow-x-auto">
+            <div className="flex min-w-[370px] md:min-w-0 md:grid md:grid-cols-2 gap-8 items-start bg-[#faf9f6] rounded-lg px-6 md:px-20 py-10">
+              {/* Left Text */}
+              <div className="w-1/2 md:w-full">
+                <h2 className="text-xl md:text-3xl font-bold text-[#84191B] mb-4">
+                  About Mission
+                </h2>
+                <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                  Growth begins at the edge of your comfort zone. The Forward
+                  Live Conference connects driven young people with global
+                  leaders to unlock leadership and personal growth.
+                </p>
+                <p className="text-gray-700 text-sm mb-7 leading-relaxed hidden sm:block">
+                  Bridge the gap between ambition and action through practical
+                  strategies, mentorship, and transformational insights.
+                </p>
+                <a href="/aboutus">
+                  <button className="bg-[#ED0340] text-black px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#eD0340] transition-colors flex items-center gap-2">
+                    Learn More <span className="text-lg">→</span>
+                  </button>
+                </a>
+              </div>
 
-          <section className="bg-[#84181B] py-16 px-6 md:px-20 rounded-lg">
-            {/* Header */}
-            <div className=" mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                Key Statistics
-              </h2>
-              <p className="text-gray-300 text-sm md:text-base">
-                Forward Live Conference
-              </p>
-            </div>
+              {/* Right Image */}
+              <div className="relative w-1/2 md:w-full">
+                <img
+                  src={Reo}
+                  alt="Reo Life"
+                  className="w-full h-[250px] md:h-[400px] object-cover object-top rounded-2xl"
+                />
 
-            {/* Cards Container */}
-            <div className="flex flex-wrap justify-center gap-10">
-              {CoreValuesData.map((item, i) => {
-                const IconComponent = item.icon;
-                return (
-                  <div
-                    key={i}
-                    className="bg-[#fafafa] rounded-2xl p-6 w-[160px] sm:w-[180px] text-center shadow-md hover:shadow-xl transition-shadow duration-300"
-                  >
-                    <div className="mb-4">
-                      <IconComponent className="text-4xl text-[#84181B] mx-auto" />
-                    </div>
-                    <h4 className="font-semibold text-sm text-[#ED0340] mb-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 font-medium">
-                      {item.count} {item.unit}
-                    </p>
+                {/* Badge */}
+                <div className="absolute bottom-4 left-4 bg-[#eD0340] text-white px-3 py-2 rounded-lg flex items-center gap-2 text-xs shadow-md">
+                  <div className="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center">
+                    <FaHome className="text-white text-xs" />
                   </div>
-                );
-              })}
+                  <div>
+                    <p className="text-[10px] text-gray-300">Lives impacted</p>
+                    <p className="font-semibold">1,500 lives</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <SpeakerCarousel />
@@ -83,7 +67,6 @@ const Home = () => {
           <Footer />
         </section>
       </div>
-      
     </div>
   );
 };

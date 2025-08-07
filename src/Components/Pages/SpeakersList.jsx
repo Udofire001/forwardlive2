@@ -12,7 +12,7 @@ const SpeakersList = () => {
       <Navbar />
 
       <section className="py-20 px-6 md:px-20">
-        <h2 className="text-3xl font-bold text-[#1B3A2D] mb-6">Featured Speakers</h2>
+        <h2 className="text-3xl font-bold text-[#84191B] mb-6">Featured Speakers</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {speakers.map((speaker) => (

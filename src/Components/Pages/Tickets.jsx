@@ -24,7 +24,7 @@ const TicketsPage = () => {
     {
       id: 1,
       name: "Early Bird",
-      price: 10,
+      price: "10k",
       originalPrice: 5,
       description:
         "Perfect for individual attendees looking to join the conference at a discounted rate.",
@@ -43,7 +43,7 @@ const TicketsPage = () => {
     {
       id: 2,
       name: "Executive",
-      price: 13,
+      price: "20k",
       originalPrice: null,
       description:
         "The complete conference experience with all sessions and networking opportunities.",
@@ -65,7 +65,7 @@ const TicketsPage = () => {
     {
       id: 3,
       name: " Premium",
-      price: 32,
+      price: "50k",
       originalPrice: null,
       description:
         "Ultimate conference experience with exclusive access and premium benefits.",
@@ -86,7 +86,7 @@ const TicketsPage = () => {
     {
       id: 4,
       name: "VVIP Platinum",
-      price: 64,
+      price: "100k",
       originalPrice: null,
       description:
         "Ultimate conference experience with exclusive access and premium benefits.",
@@ -110,7 +110,7 @@ const TicketsPage = () => {
     {
       id: 5,
       name: "VVIP Corporate",
-      price: 649,
+      price: "1M",
       originalPrice: null,
       description:
         "Ultimate conference experience with exclusive access and premium benefits.",
@@ -142,7 +142,7 @@ const TicketsPage = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-20">
+      <div className=" ">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-[#84191B] to-red-800 text-white py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-16 text-center">
@@ -213,7 +213,7 @@ const TicketsPage = () => {
                 {/* Savings Badge */}
                 {ticket.savings && (
                   <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full font-bold text-sm z-10 shadow-lg">
-                    Save ${ticket.savings}
+                    Save ₦{ticket.savings}
                   </div>
                 )}
 
@@ -230,11 +230,11 @@ const TicketsPage = () => {
                   <div className="absolute bottom-4 left-4 text-white">
                     <div className="flex items-center gap-2">
                       <span className="text-3xl font-bold">
-                        ${ticket.price}
+                        ₦{ticket.price}
                       </span>
                       {ticket.originalPrice && (
                         <span className="text-lg line-through opacity-75">
-                          ${ticket.originalPrice}
+                          ₦{ticket.originalPrice}
                         </span>
                       )}
                     </div>
@@ -269,7 +269,7 @@ const TicketsPage = () => {
                   {/* CTA Button */}
                   <button
                     onClick={() => setSelectedTicket(ticket)}
-                    className={`w-full py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105 bg-gradient-to-r ${ticket.color} hover:shadow-lg flex items-center justify-center gap-2`}
+                    className={`w-full py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105 bg-gradient-to-r ₦{ticket.color} hover:shadow-lg flex items-center justify-center gap-2`}
                   >
                     <FaShoppingCart />
                     Select {ticket.name}
@@ -332,11 +332,11 @@ const TicketsPage = () => {
                 </h3>
                 <div className="flex items-center justify-center gap-2 mb-4">
                   <span className="text-3xl font-bold text-[#84191B]">
-                    ${selectedTicket.price}
+                    ₦{selectedTicket.price}
                   </span>
                   {selectedTicket.originalPrice && (
                     <span className="text-lg text-gray-400 line-through">
-                      ${selectedTicket.originalPrice}
+                      ₦{selectedTicket.originalPrice}
                     </span>
                   )}
                 </div>

@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 
 
-import Executive from "../assets/ticket1.png";
+import Executive from "../assets/ticket11.png";
 import Standard from "../assets/ticket22.png";
 import Premium from "../assets/ticket4.png";
 import Platinum from "../assets/ticket55.png";
@@ -25,8 +25,8 @@ const TicketsSection = () => {
     {
       id: 1,
       name: "Early Bird",
-      price: 10,
-      originalPrice: 5,
+      price: "10k",
+      originalPrice: null,
       description:
         "Perfect for individual attendees looking to join the conference at a discounted rate.",
       image: [Standard],
@@ -44,7 +44,7 @@ const TicketsSection = () => {
     {
       id: 2,
       name: "Executive",
-      price: 13,
+      price: "20k",
       originalPrice: null,
       description:
         "The complete conference experience with all sessions and networking opportunities.",
@@ -67,7 +67,7 @@ const TicketsSection = () => {
     {
       id: 3,
       name: " Premium",
-      price: 32,
+      price: "50k",
       originalPrice: null,
       description:
         "Ultimate conference experience with exclusive access and premium benefits.",
@@ -95,7 +95,7 @@ const TicketsSection = () => {
         {ticketTypes.map((ticket) => (
           <div
             key={ticket.id}
-            className={`bg-white rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 group relative ${
+            className={`bg-white rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 group relative ₦{
               ticket.popular ? "ring-4 ring-[#ed0340] ring-opacity-50 scale-105" : ""
             }`}
           >
@@ -105,7 +105,7 @@ const TicketsSection = () => {
                 className={`inline-block px-4 py-2 rounded-full text-sm font-semibold text-white shadow-lg ${
                   ticket.popular
                     ? "bg-[#ed0340] flex items-center gap-1"
-                    : `bg-gradient-to-r ${ticket.color}`
+                    : `bg-gradient-to-r ₦{ticket.color}`
                 }`}
               >
                 {ticket.popular && <FaStar className="text-xs" />}
@@ -115,7 +115,7 @@ const TicketsSection = () => {
 
             {ticket.savings && (
               <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full font-bold text-sm z-10 shadow-lg">
-                Save ${ticket.savings}
+                Save ₦{ticket.savings}
               </div>
             )}
 
@@ -124,9 +124,9 @@ const TicketsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-4 left-4 text-white">
                 <div className="flex items-center gap-2 text-3xl font-bold">
-                  ${ticket.price}
+                  ₦{ticket.price}
                   {ticket.originalPrice && (
-                    <span className="text-lg line-through opacity-75">${ticket.originalPrice}</span>
+                    <span className="text-lg line-through opacity-75">₦{ticket.originalPrice}</span>
                   )}
                 </div>
                 <p className="text-sm">per person</p>
@@ -151,7 +151,7 @@ const TicketsSection = () => {
               </div>
               <button
                 onClick={() => setSelectedTicket(ticket)}
-                className={`w-full py-3 px-6 rounded-xl font-semibold text-white transition-all bg-gradient-to-r ${ticket.color} flex items-center justify-center gap-2 hover:shadow-lg`}
+                className={`w-full py-3 px-6 rounded-xl font-semibold text-white transition-all bg-gradient-to-r ₦{ticket.color} flex items-center justify-center gap-2 hover:shadow-lg`}
               >
                 <FaShoppingCart />
                 Select {ticket.name}
@@ -169,9 +169,9 @@ const TicketsSection = () => {
               <img src={selectedTicket.image} alt={selectedTicket.name} className="w-full h-48 object-cover rounded-xl mb-4" />
               <h3 className="text-2xl font-bold text-gray-800 mb-2">{selectedTicket.name} Ticket</h3>
               <div className="flex items-center justify-center gap-2 mb-4">
-                <span className="text-3xl font-bold text-[#84191B]">${selectedTicket.price}</span>
+                <span className="text-3xl font-bold text-[#84191B]">₦{selectedTicket.price}</span>
                 {selectedTicket.originalPrice && (
-                  <span className="text-lg text-gray-400 line-through">${selectedTicket.originalPrice}</span>
+                  <span className="text-lg text-gray-400 line-through">₦{selectedTicket.originalPrice}</span>
                 )}
               </div>
             </div>
@@ -207,6 +207,19 @@ const TicketsSection = () => {
           </div>
         </div>
       )}
+
+      {/* CTA Button */}
+      <div className="text-center mt-4">
+        <a
+          href="/tickets"
+          rel="noopener noreferrer"
+          className="group px-6 py-3 bg-[#84191b] hover:bg-blue-600 text-white font-bold rounded-md transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block"
+        >
+          <span className="text-xs sm:text-sm md:text-base">
+            MORE TICKETS
+          </span>
+        </a>
+      </div>
     </section>
   );
 };

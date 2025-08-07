@@ -117,82 +117,93 @@ const Events = () => {
   }, [isHovered]);
 
   return (
-    <section
-      className="relative bg-[#fafafa] py-20 px-6 md:px-16 overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <h1 className="uppercase font-semibold text-[#84191B] text-xl mb-14">
-        Forward 2025 - AUDACITY TO LEAD Forward 2025 - AUDACITY TO LEAD Forward
-        2025 - AUDACITY TO LEADForward 2025 - AUDACITY TO LEAD
-      </h1>
+    <div>
+      <h2 className="text-xl px-7 md:text-3xl font-bold text-[#84191B]">
+        Pictures from Last Event
+      </h2>
+      <section
+        className="relative bg-[#fafafa] py-4 px-6 md:px-16 overflow-hidden"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="relative overflow-x-hidden">
+          <div className="animate-marquee whitespace-nowrap">
+            <h1 className="uppercase font-semibold bg-[#84191b] text-white text-xl mb-10 inline-block">
+              Forward 2025 - AUDACITY TO LEAD Forward 2025 - AUDACITY TO LEAD
+              Forward 2025 - AUDACITY TO LEAD Forward 2025 - AUDACITY TO LEAD
+              Forward 2025 - AUDACITY TO LEAD Forward 2025 - AUDACITY TO LEAD
+              Forward 2025 - AUDACITY TO LEAD Forward 2025 - AUDACITY TO LEAD
+            </h1>
+          </div>
+        </div>
 
-      <div className="flex flex-col md:flex-row justify-center gap-10">
-        {/* Left Image Carousel */}
-        <div className="relative w-full max-w-md md:max-w-lg flex justify-center items-center">
-          <div className="absolute top-0 left-0 w-full h-full transform translate-x-2 translate-y-2 z-0 opacity-40">
+        <div className="flex flex-col md:flex-row justify-center gap-10">
+          {/* Left Image Carousel */}
+          <div className="relative w-full max-w-md md:max-w-lg flex justify-center items-center">
+            <div className="absolute top-0 left-0 w-full h-full transform translate-x-2 translate-y-2 z-0 opacity-40">
+              <img
+                src={images[imgIndex]}
+                alt={`gallery-${imgIndex}`}
+                className="w-full h-auto object-contain grayscale contrast-200"
+                style={{ filter: "drop-shadow(0 0 10px red)" }}
+              />
+            </div>
+            <div className="absolute top-0 left-0 w-full h-full transform -translate-x-2 -translate-y-2 z-0 opacity-40">
+              <img
+                src={images[imgIndex]}
+                alt={`gallery-${imgIndex}`}
+                className="w-full h-auto object-contain grayscale contrast-200"
+                style={{ filter: "drop-shadow(0 0 10px dodgerblue)" }}
+              />
+            </div>
             <img
               src={images[imgIndex]}
               alt={`gallery-${imgIndex}`}
-              className="w-full h-auto object-contain grayscale contrast-200"
-              style={{ filter: "drop-shadow(0 0 10px red)" }}
+              className="relative z-10 w-full h-auto object-contain rounded-xl shadow-2xl transition-all duration-500"
             />
           </div>
-          <div className="absolute top-0 left-0 w-full h-full transform -translate-x-2 -translate-y-2 z-0 opacity-40">
-            <img
-              src={images[imgIndex]}
-              alt={`gallery-${imgIndex}`}
-              className="w-full h-auto object-contain grayscale contrast-200"
-              style={{ filter: "drop-shadow(0 0 10px dodgerblue)" }}
-            />
-          </div>
-          <img
-            src={images[imgIndex]}
-            alt={`gallery-${imgIndex}`}
-            className="relative z-10 w-full h-auto object-contain rounded-xl shadow-2xl transition-all duration-500"
-          />
-        </div>
 
-        {/* Right Feed Carousel */}
-        <div className="relative w-full max-w-md md:max-w-lg flex justify-center items-center">
-          <div className="absolute top-0 left-0 w-full h-full transform translate-x-2 translate-y-2 z-0 opacity-40">
+          {/* Right Feed Carousel */}
+          <div className="relative w-full max-w-md md:max-w-lg flex justify-center items-center">
+            <div className="absolute top-0 left-0 w-full h-full transform translate-x-2 translate-y-2 z-0 opacity-40">
+              <img
+                src={feeds[feedIndex]}
+                alt={`feed-${feedIndex}`}
+                className="w-full h-auto object-contain grayscale contrast-200"
+                style={{ filter: "drop-shadow(0 0 10px red)" }}
+              />
+            </div>
+            <div className="absolute top-0 left-0 w-full h-full transform -translate-x-2 -translate-y-2 z-0 opacity-40">
+              <img
+                src={feeds[feedIndex]}
+                alt={`feed-${feedIndex}`}
+                className="w-full h-auto object-contain grayscale contrast-200"
+                style={{ filter: "drop-shadow(0 0 10px dodgerblue)" }}
+              />
+            </div>
             <img
               src={feeds[feedIndex]}
               alt={`feed-${feedIndex}`}
-              className="w-full h-auto object-contain grayscale contrast-200"
-              style={{ filter: "drop-shadow(0 0 10px red)" }}
+              className="relative z-10 w-full h-auto object-contain rounded-xl shadow-2xl transition-all duration-500"
             />
           </div>
-          <div className="absolute top-0 left-0 w-full h-full transform -translate-x-2 -translate-y-2 z-0 opacity-40">
-            <img
-              src={feeds[feedIndex]}
-              alt={`feed-${feedIndex}`}
-              className="w-full h-auto object-contain grayscale contrast-200"
-              style={{ filter: "drop-shadow(0 0 10px dodgerblue)" }}
-            />
-          </div>
-          <img
-            src={feeds[feedIndex]}
-            alt={`feed-${feedIndex}`}
-            className="relative z-10 w-full h-auto object-contain rounded-xl shadow-2xl transition-all duration-500"
-          />
         </div>
-      </div>
 
-      {/* CTA Button */}
-      <div className="text-center mt-10">
-        <a
-          href="https://tix.africa/discover/forward-live-with-reo-audacity-to-lead/checkout?step=tickets"  
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group px-6 py-3 bg-[#84191b] hover:bg-blue-600 text-white font-bold rounded-md transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block"
-        >
-          <span className="text-xs sm:text-sm md:text-base">
-            SECURE YOUR TICKETS
-          </span>
-        </a>
-      </div>
-    </section>
+        {/* CTA Button */}
+        <div className="text-center mt-10">
+          <a
+            href="https://tix.africa/discover/forward-live-with-reo-audacity-to-lead/checkout?step=tickets"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group px-6 py-3 bg-[#84191b] hover:bg-blue-600 text-white font-bold rounded-md transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block"
+          >
+            <span className="text-xs sm:text-sm md:text-base">
+              SECURE YOUR TICKETS
+            </span>
+          </a>
+        </div>
+      </section>
+    </div>
   );
 };
 

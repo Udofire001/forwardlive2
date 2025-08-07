@@ -1,95 +1,73 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaXTwitter,
-} from "react-icons/fa6";
-
-import logo from "../assets/Logog.png"
+import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import logo from "../assets/Logog.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#020f1f] text-white pt-12 pb-8 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row justify-between gap-12 relative z-10">
+    <footer className="bg-[#020f1f] text-white pt-12 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-12">
           {/* LEFT SECTION */}
-          <div className="lg:w-1/3">
-            <img
-              src={logo} 
-              alt="Forward Logo"
-              className="h-12 mb-4"
-            />  
+          <div className="w-full lg:w-1/3">
+            <img src={logo} alt="Forward Logo" className="h-12 mb-4" />
             <p className="text-sm mb-6">
-             HOUSE ON THE ROCK | ROCK EVENT CENTRE | Abuja, FCT
+              HOUSE ON THE ROCK | ROCK EVENT CENTRE | Abuja, FCT
             </p>
 
-            <div className="flex gap-12 text-sm font-semibold">
+            <div className="flex flex-wrap sm:flex-nowrap gap-8 text-sm font-semibold">
               <ul className="space-y-2">
-                <li>About US</li>
+                <li>About Us</li>
                 <li>Register</li>
                 <li>Speakers</li>
                 <li>Contact Us</li>
-             
               </ul>
               <ul className="space-y-2">
                 <li>Schedule</li>
                 <li>Blog</li>
                 <li>FAQs</li>
-                
               </ul>
-            </div>
-
-            <div className="mt-6">
-              <p className="text-[#84191b] font-bold mb-2">Forward Live 2025</p>
-              <div className="flex gap-6 text-sm font-semibold">
-                
-                <span className="border-l-2 border-[#84191b] pl-2">Volunteer</span>
-              </div>
             </div>
           </div>
 
           {/* CENTER SECTION */}
-          <div className="lg:w-1/3">
+          <div className="w-full lg:w-1/3">
             <h3 className="text-[#84191b] font-bold text-lg mb-4">STAY CONNECTED</h3>
-            <form className="flex items-center mb-3">
+            <form className="flex flex-col sm:flex-row items-stretch mb-3 gap-2 sm:gap-0">
               <input
                 type="email"
                 placeholder="EMAIL ADDRESS"
-                className="w-full border py-2 px-4 text-white rounded-l-md"
+                className="w-full border border-white/20 bg-transparent py-2 px-4 text-white placeholder-white text-sm rounded-md sm:rounded-l-md sm:rounded-r-none outline-none focus:ring-2 focus:ring-[#84191b]"
               />
-              <button className="bg-white text-black px-6 py-2 rounded-r-md hover:bg-gray-200 font-semibold">
+              <button className="bg-white text-black px-6 py-2 text-sm font-semibold rounded-md sm:rounded-r-md sm:rounded-l-none hover:bg-gray-200 transition">
                 SEND
               </button>
             </form>
-            <p className="text-xs">
+            <p className="text-xs opacity-80">
               By clicking SEND, you agree to REO’s Privacy Policy
             </p>
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="lg:w-1/3 flex flex-col items-start lg:items-end">
+          <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end">
             <h3 className="text-[#84191b] font-bold text-lg mb-4">CONNECT WITH US</h3>
             <div className="flex gap-4 text-2xl mb-6">
               <FaInstagram />
               <FaFacebookF />
               <FaXTwitter />
             </div>
-            <div className="text-right">
-              <p className="text-3xl font-bold leading-none">Forward</p>
-              <p className="text-3xl font-bold leading-none">Live</p>
-              <p className="text-3xl font-bold leading-none">Conference</p>
+            <div className="text-left lg:text-right">
+              <p className="text-3xl font-bold leading-tight">Forward</p>
+              <p className="text-3xl font-bold leading-tight">Live</p>
+              <p className="text-3xl font-bold leading-tight">Conference</p>
             </div>
-            
           </div>
         </div>
 
         {/* COPYRIGHT */}
-        <div className="border-t border-white/10 mt-12 pt-4 text-sm text-center opacity-80">
-         Site By © 2025 Crypt Technologies | <span className="underline">Privacy Policy</span>
+        <div className="border-t border-white/10 mt-12 pt-4 text-xs text-center opacity-60">
+          Site by © Crypt Technologies 2025 | <span className="underline">Privacy Policy</span>
         </div>
       </div>
-
-     
     </footer>
   );
 };
