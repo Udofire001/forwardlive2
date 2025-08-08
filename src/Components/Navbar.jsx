@@ -24,9 +24,10 @@ const Navbar = () => {
       {/* Desktop Buttons */}
       <div className="hidden md:flex gap-3">
         {[
-          { text: "Tickets", to: "/tickets" },
-          { text: "Speakers", to: "/speakers" },
           { text: "About US", to: "/aboutus" },
+          
+          { text: "Speakers", to: "/speakers" },
+          { text: "Tickets", to: "/tickets" },
         ].map(({ text, to }) => (
           <a
             href={to}

@@ -269,7 +269,7 @@ const TicketsPage = () => {
                   {/* CTA Button */}
                   <button
                     onClick={() => setSelectedTicket(ticket)}
-                    className={`w-full py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105 bg-gradient-to-r ₦{ticket.color} hover:shadow-lg flex items-center justify-center gap-2`}
+                    className={`w-full bg-red-500 py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105 bg-gradient-to-r ₦{ticket.color} hover:shadow-lg flex items-center justify-center gap-2`}
                   >
                     <FaShoppingCart />
                     Select {ticket.name}

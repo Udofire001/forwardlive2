@@ -151,7 +151,7 @@ const TicketsSection = () => {
               </div>
               <button
                 onClick={() => setSelectedTicket(ticket)}
-                className={`w-full py-3 px-6 rounded-xl font-semibold text-white transition-all bg-gradient-to-r ₦{ticket.color} flex items-center justify-center gap-2 hover:shadow-lg`}
+                className={`w-full bg-red-500 py-3 px-6 rounded-xl font-semibold text-white transition-all bg-gradient-to-r ₦{ticket.color} flex items-center justify-center gap-2 hover:shadow-lg`}
               >
                 <FaShoppingCart />
                 Select {ticket.name}

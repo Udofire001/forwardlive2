@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 import SpeakerDetails from "./Components/Pages/SpeakerDetails";
 import SpeakersList from "./Components/Pages/SpeakersList";
 import TicketsPage from "./Components/Pages/Tickets";
-import AboutUs from "./Components/AboutUs";
+import AboutUs from "./Components/Pages/AboutUs";
 
 function App() {
   return (
