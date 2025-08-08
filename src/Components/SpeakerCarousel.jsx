@@ -10,7 +10,7 @@ import Speaker7 from "../assets/KIKIOSINBAJO.png";
 import Speakers1 from "../assets/Speakers/Elvis.png";
 import Speakers2 from "../assets/Speakers/Ibukun.png";
 import Speakers3 from "../assets/Speakers/Jumoke.png";
-import Speakers4 from "../assets/Speakers/KiKi.png";
+import Speakers4 from "../assets/Speakers/KIKI.png";
 import Speakers5 from "../assets/Speakers/Lucky.png";
 import Speakers6 from "../assets/Speakers/Mosope.png";
 import Speakers7 from "../assets/Speakers/Pelumi.png";
