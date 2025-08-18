@@ -64,9 +64,10 @@ const Home = () => {
           <Section />
           <Events />
 
-          <Footer />
+          
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

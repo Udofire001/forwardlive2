@@ -16,9 +16,14 @@ const Footer = () => {
 
             <div className="flex flex-wrap sm:flex-nowrap gap-8 text-sm font-semibold">
               <ul className="space-y-2">
-                <li>About Us</li>
-                <li>Register</li>
-                <li>Speakers</li>
+                <li><a
+                href="/aboutus"
+                className="mt-2 mb-10">About Us</a></li>
+                <li><a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdDBNjb5i6zcfNRBvHf71z3E21gTMbrezARwa0nlRu3vR1Ang/viewform">
+                  Volunteer</a></li> 
+                <li><a 
+                href="/speakers">Speakers </a></li>
                 <li>Contact Us</li>
               </ul>
               <ul className="space-y-2">
@@ -64,8 +69,8 @@ const Footer = () => {
         </div>
 
         {/* COPYRIGHT */}
-        <div className="border-t border-white/10 mt-12 pt-4 text-xs text-center opacity-60">
-          Site by © Crypt Technologies 2025 | <span className="underline">Privacy Policy</span>
+        <div className="border-t border-white/10 mt-12 pt-4 text-sm text-center opacity-60">
+          Site by © <a href="https://wa.link/4u43l1">Crypt Technologies </a> 2025 | <span className="underline">Privacy Policy</span>
         </div>
       </div>
     </footer>

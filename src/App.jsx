@@ -15,12 +15,15 @@ function App() {
     <Router>
      
       <Routes>
+        
         <Route path="/" element={<Hero />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/speakers" element={<SpeakersList />} />
         <Route path="/speakers/:id" element={<SpeakerDetails />} />
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
+ 
     </Router>
   );
 }

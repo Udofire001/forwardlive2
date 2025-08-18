@@ -5,6 +5,8 @@ import video from "../assets/main.mp4";
  
 const Hero = () => {
   return (
+    <div>
+      
     <section className="relative w-full h-screen overflow-hidden">
       
       {/* Background Video - Full Coverage */}
@@ -114,6 +116,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    
+    </div>
   );
 };
 
