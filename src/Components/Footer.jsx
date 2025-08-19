@@ -56,9 +56,13 @@ const Footer = () => {
           <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end">
             <h3 className="text-[#84191b] font-bold text-lg mb-4">CONNECT WITH US</h3>
             <div className="flex gap-4 text-2xl mb-6">
-              <FaInstagram />
-              <FaFacebookF />
-              <FaXTwitter />
+              <ul>
+                <li> <a
+                href="https://www.instagram.com/forwardliveconferencewithreo?igsh=a25ieHVvYzZubjU1"><FaInstagram /></a>
+                </li>
+              </ul>
+              
+              
             </div>
             <div className="text-left lg:text-right">
               <p className="text-3xl font-bold leading-tight">Forward</p>
